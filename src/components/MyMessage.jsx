@@ -1,11 +1,11 @@
 const MyMessage = ({ message }) => {
-  if (message?.attachments?.length > 0) {
+  if (message.attachments && message.attachments.length > 0) {
     return (
       <img
         src={message.attachments[0].file}
-        alt="Message Attachments"
+        alt="message-attachment"
         className="message-image"
-        style={{ floatw: "right" }}
+        style={{ float: "right" }}
       />
     );
   }
